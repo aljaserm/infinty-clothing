@@ -6,7 +6,6 @@ import { auth } from '../../firebase/firebase.utils';
 import { connect } from 'react-redux';
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropDown from '../cart-dropdown/cart-dropdown.component';
-import { hidden } from 'ansi-colors';
 
 const Header = ({currentUser, hidden}) => (
     <div className='header'>
