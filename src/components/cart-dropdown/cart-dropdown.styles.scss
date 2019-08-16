@@ -4,9 +4,8 @@
   height: 340px;
   display: flex;
   flex-direction: column;
-
   padding: 20px;
-  border: 1px solid black;
+  border: 1px solid dodgerblue;
   background-color: white;
   top: 90px;
   right: 40px;
@@ -16,10 +15,9 @@
     height: 240px;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: scroll;
     overflow-x: auto;
     overflow-y: auto;
-
   }
 
   button {
