@@ -47,10 +47,12 @@ export const FotterContainer = styled.div`
 
 export const NameContainer = styled.span`
         width: 90%;
+        color:dodgerblue;
         margin-bottom: 15px;
 `;
 
 
 export const PriceContainer = styled.span`
 width: 10%;
+color:dodgerblue;
 `;

@@ -8,6 +8,7 @@ export const CollectionPageContainer = styled.div`
     export const TitleContainer = styled.h2`
       font-size: 38px;
       margin: 0 auto 30px;
+      color: dodgerblue;
     `;
 
     export const ItemContainer = styled.div`
