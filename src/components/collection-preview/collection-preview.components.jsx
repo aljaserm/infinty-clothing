@@ -6,7 +6,7 @@ import  CollectionItem from '../collection-item/collection-item.components';
 
 const CollectionPreview = ({ title, items, history, match, routeName }) => (
     <CollectionPreviewContainer>
-    <TitleContainer onClick={() => history.push(`${match.path}/${routeName}`)}>
+    <TitleContainer onClick={() => history.push(`${match.path}/${title}`)}>
 
         {title.toUpperCase()}
         </TitleContainer>
