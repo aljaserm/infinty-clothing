@@ -20,11 +20,14 @@ export const fetchCollectionStartAsync = ()=> {
     return dispatch =>{
         const collectionRef = firestore.collection('collections');
         dispatch(fetchCollectionStart());
-
-        collectionRef.get().then(async snapshot => {
-           const collectionMap= convertCollectionSnapshotToMap(snapshot);
-           dispatch(fetchCollectionSuccess(collectionMap));
+        collectionRef.get().then(snapshot => {
+          const collectionMap = convertCollectionSnapshotToMap(snapshot);
+          dispatch(fetchCollectionSuccess(collectionMap));
         }).catch(error => dispatch (fetchCollectionFailure(error.message)) );
+        // collectionRef.get().then(async snapshot => {
+        //    const collectionMap= convertCollectionSnapshotToMap(snapshot);
+        //    dispatch(fetchCollectionSuccess(collectionMap));
+        // }).catch(error => dispatch (fetchCollectionFailure(error.message)) );
     };
     };
 
