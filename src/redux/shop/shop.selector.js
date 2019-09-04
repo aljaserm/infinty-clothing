@@ -9,7 +9,7 @@ export const selectCollections = createSelector(
     shop => shop.collections
     );
 
-export const selectCollcetionForPreview = createSelector(
+export const selectCollcetionsForPreview = createSelector(
 [selectCollections],
 collections=> collections?  Object.keys(collections).map(key => collections[key]) :  []
 );
@@ -17,10 +17,10 @@ collections=> collections?  Object.keys(collections).map(key => collections[key]
 export const selectCollection = collectionUrlParam =>
 createSelector(
     [selectCollections],
-    collections => (collections? collections[collectionUrlParam] : null)
+    collections => (collections? collections[collectionUrlParam.toLowerCase()] : null)
 );
 
-export const selectIsCollectionFetching = createSelector(
+export const selectIsCollectionsFetching = createSelector(
     [selectShop],
     shop => shop.isFetching
 );
