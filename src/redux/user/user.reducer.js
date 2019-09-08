@@ -13,7 +13,7 @@ switch (action.type){
             currentUser: action.payload,
             error: null
         }
-    case UserActionTypes.SIGIN_OUT_SUCCESS:
+    case UserActionTypes.SIGN_OUT_SUCCESS:
         return{
             ...state,
             currentUser: null,
@@ -22,7 +22,8 @@ switch (action.type){
 
 
     case UserActionTypes.SIGN_IN_FAILURE:
-    case UserActionTypes.SIGIN_OUT_FAILURE:
+    case UserActionTypes.SIGN_OUT_FAILURE:
+    case UserActionTypes.SIGN_UP_FAILURE:
         return{
             ...state,
             error: action.payload
