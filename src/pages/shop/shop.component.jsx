@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Route } from 'react-router-dom';
 import CollectionPageContainer from '../collection/collection.container';
 // import CollectionPreview from '../../components/collections-overview/collections-overview.component';
@@ -12,14 +12,12 @@ import { connect } from 'react-redux';
 // const CollectionsOverviewWithSpinner = WithSpinner(CollectionsOverview);
 // const CollectionPageWithSpinner =WithSpinner(CollectionPage);
 
-class ShopPage extends React.Component{
-      componentDidMount(){
-        const { fetchCollectionsStart } = this.props;
-        fetchCollectionsStart();
+const ShopPage= ({fetchCollectionsStart, match}) =>{
+  useEffect(()=>{
+    fetchCollectionsStart();
+  }, [fetchCollectionsStart]);
 
-    }
-    render(){
-        const { match  } = this.props;
+
         return (
             <div className='shop-page'> 
             <Route
@@ -39,7 +37,7 @@ class ShopPage extends React.Component{
           />
             </div>
             );
-    }};
+    }
 
 
 
