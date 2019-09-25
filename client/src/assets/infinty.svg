@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
-<svg style="fill:dodgerblue;stroke:none; strokeWidth:none;" width="50px" height="50px" viewBox="0 0 50 25" version="1.1"><g><g>
+<!-- width="50px" height="50px" -->
+<svg style="fill:dodgerblue;stroke:none; strokeWidth:none;"  viewBox="0 0 50 25" version="1.1"><g><g>
     <path d="M38.5712472,0 C31.477746,0 26.7833602,5.97073721 22.6418233,11.2397203 C19.1033932,15.7408169
      15.7620051,19.9910913 11.6923619,19.9910913 C7.4622892,19.9910913 4.86513295,15.5153512 4.86513295,12.3067436
       C4.86513295,9.33182558 7.71424943,5.00856628 12.1796403,5.00856628 C16.5125614,5.00856628 18.7698869,8.57867326 
