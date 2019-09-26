@@ -18,17 +18,7 @@ export const CollectionItemContainer = styled.div`
       }
     }
 
-    @media only screen and (min-width: 375px) and (max-height: 667px) { 
-    width: 30vw;
-    &:hover{
-      .image{
-        opacity: unset;
-      }
-      button{
-        opacity: unset;
-      }
-    }
-    }
+
   @media screen  and (max-width: 800px)  {
     width: 40vw;
       &:hover{
@@ -64,12 +54,7 @@ export const AddButtonContainer = styled(CustomButton)`
       padding: 0 10px 0;
     }
 
-    @media only screen and (min-width: 375px) and (max-height: 667px)  { 
-      display:block;
-      opacity:0.9;
-      min-width: unset;
-      padding: 0 10px;
-    }
+
 `;
 
 export const FotterContainer = styled.div`

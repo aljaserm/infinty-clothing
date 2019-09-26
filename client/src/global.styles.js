@@ -9,9 +9,7 @@ body{
         padding: 10px;
     }
 
-    @media only screen and (min-width: 375px) and (max-height: 667px)  { 
-        padding: 1px;
-      }
+
 
 }
 

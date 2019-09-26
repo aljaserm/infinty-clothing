@@ -29,10 +29,7 @@ height: ${({ size }) => (size ? '380px' : '240px')};
   }
 
 
-  @media only screen and (min-width: 375px) and (max-height: 667px) { 
-    height:300px;
-    width: 200px;
-    }
+
   @media screen  and (max-width: 800px)  {
       height:200px;
     }
