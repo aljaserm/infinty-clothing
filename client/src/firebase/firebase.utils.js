@@ -3,13 +3,13 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const config ={
-    apiKey: "AIzaSyDhM6UTThdG2lW4n1Zo1l_nwa0O5PnOMcw",
-    authDomain: "infinity-db.firebaseapp.com",
-    databaseURL: "https://infinity-db.firebaseio.com",
-    projectId: "infinity-db",
-    storageBucket: "",
-    messagingSenderId: "116728977531",
-    appId: "1:116728977531:web:771d9bf9b4fbde00"
+  apiKey: "AIzaSyDhM6UTThdG2lW4n1Zo1l_nwa0O5PnOMcw",
+  authDomain: "infinity-db.firebaseapp.com",
+  databaseURL: "https://infinity-db.firebaseio.com",
+  projectId: "infinity-db",
+  storageBucket: "infinity-db.appspot.com",
+  messagingSenderId: "116728977531",
+  appId: "1:116728977531:web:771d9bf9b4fbde00"
   };
 
   firebase.initializeApp(config);
@@ -36,6 +36,19 @@ export const createUserProfileDocument= async (userAuth, additonalData) => {
     }
     return userRef;
 }
+
+export const getUserCartRef = async userId => {
+  const cartsRef = firestore.collection('carts').where('userId', '==', userId);
+  const snapShot = await cartsRef.get();
+
+  if (snapShot.empty) {
+    const cartDocRef = firestore.collection('carts').doc();
+    await cartDocRef.set({ userId, cartItems: [] });
+    return cartDocRef;
+  } else {
+    return snapShot.docs[0].ref;
+  }
+};
 
 export const addCollectionAndDocuments= async ( collectionKey, objectsToAdd) =>{
   const collectionRef = firestore.collection(collectionKey);
